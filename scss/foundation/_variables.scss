@@ -1,0 +1,102 @@
+// ------------------------------
+//　ベース
+// ------------------------------
+// コンテイナー
+$container                        : 1170px;
+$narrow-container                 : 960px;
+
+// グリッドの間隔
+$grid-space                       : 15px;
+$sp-container                     : 20px;
+
+
+// ------------------------------
+//　ブレークポイント
+// ------------------------------
+//min-width指定
+$breakpoint-sm-min : 480px;
+$breakpoint-md-min : 768px;
+$breakpoint-lg-min : 1024px;
+$breakpoint-xl-min : 1440px;
+
+//max-width指定
+$breakpoint-sm-max: ($breakpoint-sm-min - 1); //479px
+$breakpoint-md-max: ($breakpoint-md-min - 1); //767px
+$breakpoint-lg-max: ($breakpoint-lg-min - 1); //1023px
+$breakpoint-xl-max: ($breakpoint-xl-min - 1); //1439px
+
+
+// ------------------------------
+//　フォント
+// ------------------------------
+$font-base                        : "游ゴシック", YuGothic, "ヒラギノ角ゴ pro", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", sans-serif;
+$font-heading                     : TsukuOldGothicStd-B, sans-serif;
+$font-heading-label               : TsukuARdGothicStd-B, sans-serif;
+$font-point                       : TsukuARdGothicStd-B, sans-serif; // 迷ったらこのフォント使う
+
+// ------------------------------
+//　ファイルのパス
+// ------------------------------
+$acms-font                        : '/themes/system/fonts/'; // フォントのパスを上書き
+$root-theme-img                   : '/themes/takisada/images/'; // 画像のパスを上書き
+
+// ------------------------------
+//　カラー
+// ------------------------------
+// 背景色
+$bg-color                         : #fff;
+
+// プライマリーカラー
+$primary-color                    : #ffd93c;
+// セカンダリーカラー
+$secondary-color                  : #333;
+// ベースカラー
+$base-color                       : #ffed1f;
+
+$fav-color                        : #d0011b;
+
+// ボタン
+$btn-color                        : #333;
+$btn-active-color                 : #000;
+
+// 各sns色
+$facebook-color                   : #3b5999;
+$twitter-color                    : #55acee;
+$gplus-color                      : #dd4b39;
+$youtube-color                    : #cd201f;
+
+// ------------------------------
+//　ヘッダー
+// ------------------------------
+$sp-header-height                  : 60px;
+
+// ------------------------------
+//　エントリー
+// ------------------------------
+$entry-margin-bottom              : 25px;
+
+$entry-element-margin-bottom-sm   : 10px !default;
+$entry-element-margin-bottom-md   : 25px !default;
+$entry-element-margin-bottom-lg   : 30px !default;
+
+// ------------------------------
+//　スライダー
+// ------------------------------
+$main-slider-height-mobile        : 300px;
+$main-slider-height-desktop       : 450px;
+
+
+// ------------------------------
+//　カードレイアウト
+// ------------------------------
+$card-grid-space: 30px;
+
+// ------------------------------
+//　ギャラリー
+// ------------------------------
+$gallery-grid-space: 20px;
+
+// ------------------------------
+//　サムネイル
+// ------------------------------
+$thumbnail-grid-space: 30px;

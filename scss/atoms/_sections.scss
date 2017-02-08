@@ -1,0 +1,28 @@
+.section__group {
+  display: flex;
+}
+.section {
+  flex: 5 0 0;
+  margin: 0 15px;
+  padding: 20px;
+}
+.section-title {
+  font-size: 50px;
+  text-align: center;
+}
+
+.section--b {
+  background: #7fcdff;
+}
+.section--i {
+  background: #ffa95a;
+}
+.section--n {
+  background: #35e436;
+}
+.section--g {
+  background: #ff7979;
+}
+.section--o {
+  background: #df93f5;
+}

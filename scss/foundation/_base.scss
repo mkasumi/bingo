@@ -1,0 +1,133 @@
+/* ------------------------------
+　　ベース
+------------------------------ */
+html {
+  height: 100%;
+}
+
+body {
+  color: #333;
+  font-family: $font-base;
+  font-style: 16px;
+}
+
+@media screen and (min-width: $breakpoint-lg-min) {
+  body {
+    &:before {
+      position: fixed;
+      content: "";
+      right: 0;
+      width: 17px;
+      height: 100%;
+      background: $base-color;
+      z-index: 1;
+    }
+  }
+}
+
+/* リンクの設定 */
+a {
+  border: none;
+  color: #006dd9;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #7f5ad7;
+  text-decoration: none;
+}
+
+a:active {
+  color: #006dd9;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #006dd9;
+  text-decoration: underline;
+}
+
+/* コンテナー */
+.acms-container {
+  .acms-container {
+    padding: 0;
+  }
+}
+
+.c-narrow-container {
+  margin: 0 auto;
+  max-width: $narrow-container;
+  padding-left: $sp-container;
+  padding-right: $sp-container;
+}
+
+@media (max-width: $container) {
+  .acms-container {
+    padding-left: $sp-container;
+    padding-right: $sp-container;
+  }
+  .sp-container {
+    padding-right: $sp-container;
+    padding-left: $sp-container;
+    .acms-grid & {
+      padding-right: $sp-container;
+      padding-left: $sp-container;
+    }
+  }
+  .sp-container {
+    .sp-container {
+      padding: 0;
+    }
+    .acms-container {
+      .sp-container {
+        padding: 0;
+      }
+    }
+  }
+}
+
+/* アニメーション */
+@keyframes fade-in {
+  0% {
+    display: none;
+    opacity: 0;
+  }
+  20% {
+    display: block;
+    opacity: 0;
+  }
+  100% {
+    display: block;
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes fade-in {
+  0% {
+    display: none;
+    opacity: 0;
+  }
+  20% {
+    display: block;
+    opacity: 0;
+  }
+  100% {
+    display: block;
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fade-in {
+  0% {
+    display: none;
+    opacity: 0;
+  }
+  20% {
+    display: block;
+    opacity: 0;
+  }
+  100% {
+    display: block;
+    opacity: 1;
+  }
+}

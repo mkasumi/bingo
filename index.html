@@ -4,15 +4,14 @@
   <meta charset="UTF-8">
   <title>ビンゴゲーム</title>
   <link rel="stylesheet" href="./css/bingo.min.css">
-  <script src="/js/vue.js"></script>
+  <script src="js/vue.js"></script>
 </head>
 <body>
-<div>
+<div id="app">
   <ol class="priviously-items">
-    <li></li>
-    <li></li>
-    <li></li>
+    <li v-for="num in nums">{{ num.text }}</li>
   </ol>
+  <button v-on:click="nextNum">Next Num</button>
 </div>
 
 <div class="section__group">
@@ -147,5 +146,21 @@
     </div>
   </section>
 </div>
+<script>
+  var app = new Vue({
+    el: '#app',
+    data: {
+      nums: [
+        { text: '1' },
+        { text: '72' }
+      ]
+    },
+    methods: {
+      nextNum: function () {
+        app.nums.push({ text: 'New' })
+      }
+    }
+  })
+</script>
 </body>
 </html>

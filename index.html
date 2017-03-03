@@ -14,6 +14,10 @@
   <button v-on:click="nextNum">Next Num</button>
 </div>
 
+  <div>
+    <ul></ul>
+  </div>
+
 <div class="section__group">
   <section class="section section--b">
     <h1 class="section-title">B</h1>
@@ -151,14 +155,19 @@
     el: '#app',
     data: {
       nums: [
-        { text: '1' },
-        { text: '72' }
+        { text: '' }
       ]
     },
     methods: {
+      for (var i = 1; i < 75; i++){
+          app.nums.push({ text:random })
+        }
       nextNum: function () {
-        var random  = 1 + Math.floor(Math.random() * 75);
-        app.nums.push({ text:random })
+         var random  = 1 + Math.floor(Math.random() * 75);
+         app.nums = [];
+          for (var i = 1; i < 75; i++){
+            app.nums.push({ text:random })
+          }
       }
     }
   })

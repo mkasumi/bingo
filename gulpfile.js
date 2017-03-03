@@ -2,7 +2,8 @@
 var gulp = require('gulp');
 
 // 導入されているプラグイン
-var rename = require('gulp-rename'),
+var browserSync = require('browser-sync').create(),
+	rename = require('gulp-rename'),
 	sass = require('gulp-sass'),
 	path = require('path'),
 	cssnano = require('gulp-cssnano'),
@@ -33,7 +34,8 @@ gulp.task('sass', function () {
         .pipe(rename({
           suffix: '.min'
         }))
-		.pipe(gulp.dest('css'));
+		.pipe(gulp.dest('css'))
+		.pipe(browserSync.stream());
 });
 // // SCSSファイルを圧縮する
 // SCSSファイルを圧縮するgulp.task('mincss', function () {
@@ -52,10 +54,15 @@ gulp.task('sass', function () {
 // });
 
 // gulp.task('minjs', function () {
-// 	gulp.src(['themes/' + rootTheme + '/js/**.js'])
-// 		.pipe(gzip())
-// 		.pipe(gulp.dest('themes/' + rootTheme + '/js'));
+//	gulp.src(['themes/' + rootTheme + '/js/**.js'])
+//		.pipe(gzip())
+//		.pipe(gulp.dest('themes/' + rootTheme + '/js'));
 // });
+
+gulp.task('html', function () {
+	gulp.src(['**.html'])
+		.pipe(browserSync.stream());
+});
 
 
 

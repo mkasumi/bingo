@@ -11,20 +11,6 @@ body {
   font-style: 16px;
 }
 
-@media screen and (min-width: $breakpoint-lg-min) {
-  body {
-    &:before {
-      position: fixed;
-      content: "";
-      right: 0;
-      width: 17px;
-      height: 100%;
-      background: $base-color;
-      z-index: 1;
-    }
-  }
-}
-
 /* リンクの設定 */
 a {
   border: none;

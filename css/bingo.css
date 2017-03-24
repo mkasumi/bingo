@@ -3040,18 +3040,6 @@ body {
 	font-style: 16px;
 }
 
-@media screen and (min-width: 1024px) {
-	body:before {
-		position: fixed;
-		content: "";
-		right: 0;
-		width: 17px;
-		height: 100%;
-		background: #FFED1F;
-		z-index: 1;
-	}
-}
-
 /* リンクの設定 */
 a {
 	border: none;

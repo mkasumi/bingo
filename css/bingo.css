@@ -3118,6 +3118,7 @@ a:hover {
 	margin: 0 0 20px 0;
 	padding: 0;
 	background: #EEE;
+	overflow: auto;
 }
 .priviously-items li {
 	width: 50px;

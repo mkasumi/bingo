@@ -27,33 +27,31 @@
 <script>
 
 var items = [];
-for (var i = 1; i < 76; i++){
-  // items.push({text:i,selected:false});
-  items.push(i);
-}
+ for (var i = 1; i < 76; i++){
+   items.push({text:i,selected:false});
+ }
 
-function random(array, num) {
-  var a = array;
-  var t = [];
-  var r = [];
-  var l = a.length;
-  var n = num < l ? num : l; // numよりもlが大きかったらnumを、逆ならlをnに代入する
-  while (n-- > 0) { // あと置きは先に1つ引く
-    var i = Math.random() * l | 0;
-    r[n] = t[i] || a[i];
-    --l;// 先置きはあとに1つ引く
-    t[i] = t[l] || a[l];
-  }
-  return r;
-}
+ //Fisher-Yates Algorithm きちんとシャッフルしてくれるらしい
+	//Arrayにshuffleメソッドをprototypeプロパティを使って追加
+	Array.prototype.shuffle = function() {
+	var i = this.length;
+    while (i) {
+      var j = Math.floor(Math.random()*i);
+      var t = this[--i];
+      this[i] = this[j];
+      this[j] = t;
+    }
+	};
+	//Fisher-Yates End
+	//1~75の番号の配列
+	var allNums = [];
+	for(i=1;i<76;i++){
+		allNums.push(i);
+	}
 
-var randomArray = random(items,75);
-console.log(randomArray);
-var result = [];
-for (var i =0; i < randomArray.length-1; i++) {
-  result.push({text:randomArray[i],selected:false});
-}
-console.log(result);
+  allNums.shuffle();
+
+  var count=1
 
   var app = new Vue({
     el: '#app',
@@ -63,10 +61,16 @@ console.log(result);
     },
     methods: {
       nextNum: function () {
-        //  var random  = 1 + Math.floor(Math.random() * 75);
-        //     app.items[random-1].selected = true;
-        //     app.nums.push({ text:random });
-      
+
+         var selectedNums = allNums.indexOf(count)+1;
+         count++;
+
+         if(count>76){
+           alert('Game is Done!')
+            return false;
+        }
+
+        app.nums.push({ text:selectedNums +','+ count, selected:true});
       }
     }
   })

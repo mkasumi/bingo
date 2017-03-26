@@ -8,7 +8,7 @@
 </head>
 <body>
 <div id="app">
-  <ol class="priviously-items">
+  <ol id="priviously-items" class="priviously-items">
     <li v-for="num in nums">{{ num.text }}</li>
   </ol>
   <button v-on:click="nextNum">Next Num</button>
@@ -70,7 +70,14 @@ var items = [];
             return false;
         }
 
-        app.nums.push({ text:selectedNums +','+ count, selected:true});
+        app.nums.push({ text:selectedNums, selected:true});
+        app.items[selectedNums-1].selected = true;
+
+        if(count > 7) {
+          var previous = document.getElementById('priviously-items');
+          var firstChild = previous.firstElementChild;
+          previous.removeChild(firstChild); 
+        };
       }
     }
   })

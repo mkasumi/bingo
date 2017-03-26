@@ -9,10 +9,13 @@
   padding: 0;
 }
 .numbers li {
-
   margin: 0 2px 4px;
   text-align: center;
   font-size: 28px;
   background: #FFF;
   border-radius: 5px;
+
+  &.active {
+    background: #CCC;
+  }
 }

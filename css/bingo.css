@@ -3149,6 +3149,9 @@ a:hover {
 	background: #FFF;
 	border-radius: 5px;
 }
+.numbers li.active {
+	background: #CCC;
+}
 
 .section__group {
 	display: -ms-flexbox;

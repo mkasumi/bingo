@@ -14,8 +14,8 @@
   <button v-on:click="nextNum">Next Num</button>
 
   <div class="section__group">
-    <section class="section section--b">
-      <h1 class="section-title">B</h1>
+    <section v-for="section in sections" class="section section--b">
+      <h1 class="section-title">{{section}}</h1>
       <div class="numbers__group">
         <ul class="numbers">
           <li v-for="item in items" v-bind:class="{ active: item.selected }">{{item.text}}</li>
@@ -57,11 +57,11 @@ var items = [];
     el: '#app',
     data: {
       items: items,
-      nums:[]
+      nums:[],
+      sections: ['B','I','N','G','O']
     },
     methods: {
       nextNum: function () {
-
          var selectedNums = allNums.indexOf(count)+1;
          count++;
 

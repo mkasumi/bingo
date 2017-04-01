@@ -14,7 +14,7 @@
   <button v-on:click="nextNum">Next Num</button>
 
   <div class="section__group">
-    <section v-for="section in sections" class="section section--b">
+    <section v-for="section in sections" class="section" :class="['section--' + section]">
       <h1 class="section-title">{{section}}</h1>
       <div class="numbers__group">
         <ul class="numbers">
@@ -61,6 +61,11 @@ var items = [];
       sections: ['B','I','N','G','O']
     },
     methods: {
+      filters:{
+        slice: function (value, begin, end){
+          return value.slice(begin, end)
+        }
+      },
       nextNum: function () {
          var selectedNums = allNums.indexOf(count)+1;
          count++;

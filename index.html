@@ -14,11 +14,12 @@
   <button v-on:click="nextNum">Next Num</button>
 
   <div class="section__group">
-    <section v-for="section in sections" class="section" :class="['section--' + section]">
+    <section v-for="(section,index) in sections" class="section" :class="['section--' + section]">
       <h1 class="section-title">{{section}}</h1>
       <div class="numbers__group">
-        <ul class="numbers">
-          <li v-for="item in items" v-bind:class="{ active: item.selected }">{{item.text}}</li>
+        <ul class="numbers" :class="['index--' + index]">
+          <!--<span v-text="index | slice '0' '4'"></span>-->
+          <li v-for="item in slicedItems" v-bind:class="{ active: item.selected }">{{item.text}}</li>
         </ul>
       </div>
     </section>
@@ -49,6 +50,12 @@ var items = [];
 		allNums.push(i);
 	}
 
+  // Vue.filter('slice', function (value, begin, end) {
+  //   return value.slice(begin, end)
+  // })
+
+
+
   allNums.shuffle();
 
   var count=1
@@ -60,12 +67,16 @@ var items = [];
       nums:[],
       sections: ['B','I','N','G','O']
     },
+    computed:{
+       slicedItems: function (value){
+        //  var times = this.$parent.$index;
+        //  console.log(times);
+        var times = value;
+         var sliceAmount = 15 * times;
+         return this.items.slice(0, 15);
+      }
+    },
     methods: {
-      filters:{
-        slice: function (value, begin, end){
-          return value.slice(begin, end)
-        }
-      },
       nextNum: function () {
          var selectedNums = allNums.indexOf(count)+1;
          count++;

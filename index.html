@@ -18,8 +18,7 @@
       <h1 class="section-title">{{section}}</h1>
       <div class="numbers__group">
         <ul class="numbers" :class="['index--' + index]">
-          <!--<span v-text="index | slice '0' '4'"></span>-->
-          <li v-for="item in slicedItems" v-bind:class="{ active: item.selected }">{{item.text}}</li>
+          <li v-for="item in items" v-if="index*15 <= item.text-1 && item.text < (index + 1 )*15+1" v-bind:class="{ active: item.selected }">{{item.text}}</li>
         </ul>
       </div>
     </section>
@@ -67,15 +66,6 @@ var items = [];
       nums:[],
       sections: ['B','I','N','G','O']
     },
-    computed:{
-       slicedItems: function (value){
-        //  var times = this.$parent.$index;
-        //  console.log(times);
-        var times = value;
-         var sliceAmount = 15 * times;
-         return this.items.slice(0, 15);
-      }
-    },
     methods: {
       nextNum: function () {
          var selectedNums = allNums.indexOf(count)+1;
@@ -89,11 +79,10 @@ var items = [];
         app.nums.push({ text:selectedNums, selected:true});
         app.items[selectedNums-1].selected = true;
 
-        if(count > 7) {
-          var previous = document.getElementById('priviously-items');
-          var firstChild = previous.firstElementChild;
-          previous.removeChild(firstChild); 
-        };
+       if(count > 7) {
+        app.nums.shift();
+       }
+
       }
     }
   })

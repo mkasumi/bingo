@@ -26,33 +26,29 @@
 </div>
 <script>
 
-var items = [];
- for (var i = 1; i < 76; i++){
-   items.push({text:i,selected:false});
- }
+  var items = [];
+   for (var i = 1; i < 76; i++){
+     items.push({text:i,selected:false});
+   }
 
- //Fisher-Yates Algorithm きちんとシャッフルしてくれるらしい
-	//Arrayにshuffleメソッドをprototypeプロパティを使って追加
-	Array.prototype.shuffle = function() {
-	var i = this.length;
+  //Fisher-Yates Algorithm きちんとシャッフルしてくれるらしい
+  //Arrayにshuffleメソッドをprototypeプロパティを使って追加
+  Array.prototype.shuffle = function() {
+  var i = this.length;
     while (i) {
       var j = Math.floor(Math.random()*i);
       var t = this[--i];
       this[i] = this[j];
       this[j] = t;
     }
-	};
-	//Fisher-Yates End
-	//1~75の番号の配列
-	var allNums = [];
-	for(i=1;i<76;i++){
-		allNums.push(i);
-	}
+  };
 
-  // Vue.filter('slice', function (value, begin, end) {
-  //   return value.slice(begin, end)
-  // })
-
+  //Fisher-Yates End
+  //1~75の番号の配列
+  var allNums = [];
+  for(i=1;i<76;i++){
+      allNums.push(i);
+  }
 
 
   allNums.shuffle();
@@ -72,7 +68,7 @@ var items = [];
          count++;
 
          if(count>76){
-           alert('Game is Done!')
+           alert('Game is Done!');
             return false;
         }
 

@@ -7,11 +7,13 @@
   list-style: none;
   margin: 0;
   padding: 0;
+  column-count: 3;
 }
 .numbers li {
   margin: 0 2px 4px;
   text-align: center;
-  font-size: 28px;
+  //font-size: 28px;
+  font-size: calc(1.2em + .2vw);
   background: #FFF;
   border-radius: 5px;
 

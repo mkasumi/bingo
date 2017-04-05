@@ -68,16 +68,16 @@
          count++;
 
          if(count>76){
-           alert('Game is Done!');
-            return false;
-        }
+             alert('Game is Done!');
+              return false;
+          }
 
-        app.nums.push({ text:selectedNums, selected:true});
-        app.items[selectedNums-1].selected = true;
+          app.nums.push({ text:selectedNums, selected:true});
+          app.items[selectedNums-1].selected = true;
 
-       if(count > 7) {
-        app.nums.shift();
-       }
+         if(count > 7) {
+          app.nums.shift();
+         }
 
       }
     }

@@ -8,10 +8,12 @@
 </head>
 <body>
 <div id="app">
-  <ol id="priviously-items" class="priviously-items">
-    <li v-for="num in nums">{{ num.text }}</li>
-  </ol>
-  <button v-on:click="nextNum">Next Num</button>
+  <div>
+    <button v-on:click="nextNum">Select</button>
+    <ol id="priviously-items" class="priviously-items">
+      <li v-for="num in nums">{{ num.text }}</li>
+    </ol>
+  </div>
 
   <div class="section__group">
     <section v-for="(section,index) in sections" class="section" :class="['section--' + section]">

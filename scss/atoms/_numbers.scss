@@ -1,21 +1,21 @@
 .numbers__group {
-  display: flex;
+
 }
 .numbers {
-  flex: 3 0 0;
-  flex-wrap: wrap;
   list-style: none;
   margin: 0;
   padding: 0;
   column-count: 3;
+  column-gap: 1px;
 }
 .numbers li {
-  margin: 0 2px 4px;
+  margin: 0 0 1px;
+  padding: calc(10px + .6vw);
   text-align: center;
   //font-size: 28px;
-  font-size: calc(1.2em + .2vw);
+  font-size: calc(1em + .6vw);
   background: #FFF;
-  border-radius: 5px;
+  //border-radius: 5px;
 
   &.active {
     background: #CCC;

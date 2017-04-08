@@ -4,18 +4,30 @@
   height: 2em;
   margin: 20px 0;
   padding: 0;
-  color: #FFF;
   font-size: calc(2em + 6vw);
-  // background: #EEE;
   overflow: auto;
-  
+
   li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.previously-item-section {
+  margin: 0 20px 0 0;
+  width: 1em;
+}
+
+.previously-items {
+  .odometer {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 2em;
     height: 2em;
     margin: 0 5px;
+    color: #FFF;
     font-size: 1em;
     text-align: center;
     border-radius: 50%;
@@ -24,25 +36,37 @@
 }
 
 .previously-item--undefined {
-  background: #CCC;
+  .odometer {
+    background: #CCC;
+  }
 }
 
 .previously-item--B {
-  background: $color-B;
+  .odometer {
+    background: $color-B;
+  }
 }
 
 .previously-item--I {
-  background: $color-I;
+  .odometer {
+    background: $color-I;
+  }
 }
 
 .previously-item--N {
-  background: $color-N;
+  .odometer {
+    background: $color-N;
+  }
 }
 
 .previously-item--G {
-  background: $color-G;
+  .odometer {
+    background: $color-G;
+  }
 }
 
 .previously-item--O {
-  background: $color-O;
+  .odometer {
+    background: $color-O;
+  }
 }

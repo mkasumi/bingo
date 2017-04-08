@@ -11,7 +11,7 @@
 <div id="app">
   <div class="controller">
       <ol id="previously-items" class="previously-items">
-        <li v-for="num in nums" :class="['previously-item--' + num.section]"><span id="odometer" class="odometer">{{ num.text }}</span></li>
+        <li v-for="num in nums" :class="['previously-item--' + num.section]"><span id="sectionItem" class="previously-item-section"></span><span id="odometer" class="odometer">{{ num.text }}</span></li>
       </ol>
   </div>
 
@@ -89,6 +89,8 @@
           } else if (selectedNums < 76) {
             var sectionGroup = 'O'; 
           }
+
+          sectionItem.innerHTML = sectionGroup;
           
           setTimeout(function(){
             app.nums.push({ text:selectedNums, selected:true, section: sectionGroup});

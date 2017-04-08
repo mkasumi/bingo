@@ -5,8 +5,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 1em;
-    height: 1em;
+    width: calc(1em + .4vw);
+    height: calc(1em + .4vw);
     padding: 0;
     color: #FFF;
     font-size: 44px;

@@ -8,14 +8,16 @@
 // ベース
 @import "foundation/font-awesome/font-awesome";
 @import "foundation/base";
+@import "foundation/animation";
 
 // Atomic
-@import "atoms/previously";
+@import "atoms/button";
 @import "atoms/numbers";
+@import "atoms/previously";
 @import "atoms/sections";
 
 //// Molecules
-//@import "molecules/";
+@import "molecules/controller";
 //
 //// Organizms
 //@import "organizms/";

@@ -30,9 +30,6 @@ $breakpoint-xl-max: ($breakpoint-xl-min - 1); //1439px
 //　フォント
 // ------------------------------
 $font-base                        : "游ゴシック", YuGothic, "ヒラギノ角ゴ pro", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", sans-serif;
-$font-heading                     : TsukuOldGothicStd-B, sans-serif;
-$font-heading-label               : TsukuARdGothicStd-B, sans-serif;
-$font-point                       : TsukuARdGothicStd-B, sans-serif; // 迷ったらこのフォント使う
 
 // ------------------------------
 //　ファイルのパス
@@ -43,60 +40,13 @@ $root-theme-img                   : '/themes/takisada/images/'; // 画像のパ�
 // ------------------------------
 //　カラー
 // ------------------------------
-// 背景色
-$bg-color                         : #fff;
 
-// プライマリーカラー
-$primary-color                    : #ffd93c;
-// セカンダリーカラー
-$secondary-color                  : #333;
-// ベースカラー
-$base-color                       : #ffed1f;
-
-$fav-color                        : #d0011b;
+$color-B                        : #FF1744;
+$color-I                        : #FF9100;
+$color-N                        : #00C853;
+$color-G                        : #304FFE;
+$color-O                        : #AA00FF;
 
 // ボタン
 $btn-color                        : #333;
 $btn-active-color                 : #000;
-
-// 各sns色
-$facebook-color                   : #3b5999;
-$twitter-color                    : #55acee;
-$gplus-color                      : #dd4b39;
-$youtube-color                    : #cd201f;
-
-// ------------------------------
-//　ヘッダー
-// ------------------------------
-$sp-header-height                  : 60px;
-
-// ------------------------------
-//　エントリー
-// ------------------------------
-$entry-margin-bottom              : 25px;
-
-$entry-element-margin-bottom-sm   : 10px !default;
-$entry-element-margin-bottom-md   : 25px !default;
-$entry-element-margin-bottom-lg   : 30px !default;
-
-// ------------------------------
-//　スライダー
-// ------------------------------
-$main-slider-height-mobile        : 300px;
-$main-slider-height-desktop       : 450px;
-
-
-// ------------------------------
-//　カードレイアウト
-// ------------------------------
-$card-grid-space: 30px;
-
-// ------------------------------
-//　ギャラリー
-// ------------------------------
-$gallery-grid-space: 20px;
-
-// ------------------------------
-//　サムネイル
-// ------------------------------
-$thumbnail-grid-space: 30px;

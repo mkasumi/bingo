@@ -8,11 +8,15 @@
 </head>
 <body>
 <div id="app">
-  <div>
-    <button v-on:click="nextNum">Select</button>
-    <ol id="priviously-items" class="priviously-items">
-      <li v-for="num in nums">{{ num.text }}</li>
-    </ol>
+  <div class="controller">
+    <div class="controller-item">
+      <button v-on:click="nextNum" class="btn-add">+</button>
+    </div>
+    <div class="controller-item">
+      <ol id="previously-items" class="previously-items">
+        <li v-for="num in nums" :class="['previously-item--' + num.section]">{{ num.text }}</li>
+      </ol>
+    </div>
   </div>
 
   <div class="section__group">
@@ -61,7 +65,7 @@
     el: '#app',
     data: {
       items: items,
-      nums:[],
+      nums:['','','','',''],
       sections: ['B','I','N','G','O']
     },
     methods: {
@@ -74,12 +78,23 @@
               return false;
           }
 
-          app.nums.push({ text:selectedNums, selected:true});
+          if(selectedNums < 15) {
+           var sectionGroup = 'B'; 
+          } else if (selectedNums < 30) {
+            var sectionGroup = 'I'; 
+          } else if (selectedNums < 45) {
+            var sectionGroup = 'N'; 
+          } else if (selectedNums < 60) {
+            var sectionGroup = 'G'; 
+          } else if (selectedNums < 76) {
+            var sectionGroup = 'O'; 
+          }
+
+          app.nums.push({ text:selectedNums, selected:true, section: sectionGroup});
           app.items[selectedNums-1].selected = true;
 
-         if(count > 7) {
           app.nums.shift();
-         }
+
 
       }
     }

@@ -3,27 +3,31 @@
 }
 .section {
   flex: 5 0 0;
-  margin: 0 5px;
-  padding: 5px;
+  margin: 0 2px;
+  padding: 5px 5px 0 5px;
+  border-radius: 5px;
 }
 .section-title {
   margin: 0;
-  font-size: calc(1em + 1vw);
+  padding: 5px 0 10px;
+  color: #FFF;
+  font-size: calc(.5em + 1vw);
   text-align: center;
+  line-height: 1;
 }
 
 .section--B {
-  background: #7fcdff;
+  background: $color-B;
 }
 .section--I {
-  background: #ffa95a;
+  background: $color-I;
 }
 .section--N {
-  background: #35e436;
+  background: $color-N;
 }
 .section--G {
-  background: #ff7979;
+  background: $color-G;
 }
 .section--O {
-  background: #df93f5;
+  background: $color-O;
 }

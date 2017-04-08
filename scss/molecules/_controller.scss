@@ -1,0 +1,9 @@
+.controller {
+    display: flex;
+    flex-direction: row-reverse;
+}
+.controller-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

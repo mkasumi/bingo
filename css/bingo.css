@@ -3642,8 +3642,6 @@ a:hover {
 
 .btn-add {
 	position: absolute;
-	right: calc(.6em + .3vw);
-	bottom: calc(.6em + .3vw);
 	display: -ms-flexbox;
 	display: flex;
 	-ms-flex-align: center;
@@ -3760,8 +3758,9 @@ a:hover {
 }
 
 .previously-item-section {
-	margin: 0 20px 0 0;
+	margin: 0 10px 0 0;
 	width: 1em;
+	text-align: center;
 }
 
 .previously-items .odometer {
@@ -3858,11 +3857,6 @@ a:hover {
 	align-items: center;
 }
 
-.controller-item {
-	display: -ms-flexbox;
-	display: flex;
-	-ms-flex-pack: center;
-	justify-content: center;
-	-ms-flex-align: center;
-	align-items: center;
+.controller-item:first-child {
+	padding: 0 0 0 40px;
 }

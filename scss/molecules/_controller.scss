@@ -3,9 +3,17 @@
     flex-direction: row-reverse;
     justify-content: center;
     align-items: center;
+    // display: table;
+    // margin: 0 auto;
 }
 .controller-item {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+    // display: table-cell;
+    // vertical-align: middle;
+
+    &:first-child {
+        padding: 0 0 0 40px;
+    }
 }

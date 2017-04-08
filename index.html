@@ -10,9 +10,14 @@
 <body>
 <div id="app">
   <div class="controller">
+    <div class="controller-item">
+      <button v-on:click="nextNum" class="btn-add">+</button>
+    </div>
+    <div class="controller-item">
       <ol id="previously-items" class="previously-items">
         <li v-for="num in nums" :class="['previously-item--' + num.section]"><span id="sectionItem" class="previously-item-section"></span><span id="odometer" class="odometer">{{ num.text }}</span></li>
       </ol>
+    </div>
   </div>
 
   <div class="section__group">
@@ -25,10 +30,6 @@
       </div>
     </section>
   </div>
-
-  <div class="btn-wrap">
-      <button v-on:click="nextNum" class="btn-add">+</button>
-    </div>
 </div>
 <script>
 

@@ -5,18 +5,14 @@
   <title>ビンゴゲーム</title>
   <link rel="stylesheet" href="./css/bingo.min.css">
   <script src="js/vue.js"></script>
+  <script src="js/odometer.js"></script>
 </head>
 <body>
 <div id="app">
   <div class="controller">
-    <div class="controller-item">
-      <button v-on:click="nextNum" class="btn-add">+</button>
-    </div>
-    <div class="controller-item">
       <ol id="previously-items" class="previously-items">
-        <li v-for="num in nums" :class="['previously-item--' + num.section]">{{ num.text }}</li>
+        <li v-for="num in nums" :class="['previously-item--' + num.section]"><span id="odometer" class="odometer">{{ num.text }}</span></li>
       </ol>
-    </div>
   </div>
 
   <div class="section__group">
@@ -29,6 +25,10 @@
       </div>
     </section>
   </div>
+
+  <div class="btn-wrap">
+      <button v-on:click="nextNum" class="btn-add">+</button>
+    </div>
 </div>
 <script>
 
@@ -55,8 +55,6 @@
   for(i=1;i<76;i++){
       allNums.push(i);
   }
-
-
   allNums.shuffle();
 
   var count=1
@@ -65,7 +63,7 @@
     el: '#app',
     data: {
       items: items,
-      nums:['','','','',''],
+      nums:['0'],
       sections: ['B','I','N','G','O']
     },
     methods: {
@@ -78,8 +76,10 @@
               return false;
           }
 
+          odometer.innerHTML = selectedNums;
+
           if(selectedNums < 15) {
-           var sectionGroup = 'B'; 
+          var sectionGroup = 'B'; 
           } else if (selectedNums < 30) {
             var sectionGroup = 'I'; 
           } else if (selectedNums < 45) {
@@ -89,13 +89,13 @@
           } else if (selectedNums < 76) {
             var sectionGroup = 'O'; 
           }
+          
+          setTimeout(function(){
+            app.nums.push({ text:selectedNums, selected:true, section: sectionGroup});
+            app.items[selectedNums-1].selected = true;
 
-          app.nums.push({ text:selectedNums, selected:true, section: sectionGroup});
-          app.items[selectedNums-1].selected = true;
-
-          app.nums.shift();
-
-
+            app.nums.shift();
+          }, 1300);
       }
     }
   })

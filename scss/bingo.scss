@@ -6,6 +6,7 @@
 @import "foundation/mixins";
 @import "foundation/sass-easing";
 // ベース
+@import "foundation/normalize";
 @import "foundation/font-awesome/font-awesome";
 @import "foundation/base";
 @import "foundation/animation";
@@ -13,6 +14,7 @@
 // Atomic
 @import "atoms/button";
 @import "atoms/numbers";
+@import "atoms/odometer";
 @import "atoms/previously";
 @import "atoms/sections";
 

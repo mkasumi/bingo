@@ -3648,11 +3648,11 @@ a:hover {
 	align-items: center;
 	-ms-flex-pack: center;
 	justify-content: center;
-	width: calc(1em + .4vw);
-	height: calc(1em + .4vw);
+	width: calc(1em + 2vw);
+	height: calc(1em + 2vw);
 	padding: 0;
 	color: #FFF;
-	font-size: 44px;
+	font-size: calc(2em + 2.2vw);
 	line-height: 1;
 	border: 0;
 	border-radius: 50%;

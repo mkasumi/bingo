@@ -16,7 +16,6 @@
   height: 1.5em;
   margin: 0 0 5px;
   text-align: center;
-  //font-size: 28px;
   font-size: calc(.6em + 2.2vw);
   background: #FFF;
   overflow: initial;
@@ -26,7 +25,6 @@
 
   &:before {
     content: '';
-    display: none;
     position: absolute;
     top: 0;
     left: 0;
@@ -37,7 +35,6 @@
     background-color: inherit;
     border-radius: 50%;
     transition: opacity .3s, transform .3s;
-    animation: pulse-animation 1s cubic-bezier(0.24, 0, 0.38, 1) 1 forwards;
     z-index: -1
   }
 
@@ -46,7 +43,7 @@
     background: #FFF;
 
     &:before {
-      display: block;
+      animation: pulse-animation 1s cubic-bezier(0.24, 0, 0.38, 1) 1 forwards;
     }
   }
 }

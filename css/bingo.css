@@ -3696,7 +3696,6 @@ a:hover {
 }
 .numbers li:before {
 	content: "";
-	display: none;
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -3707,7 +3706,6 @@ a:hover {
 	background-color: inherit;
 	border-radius: 50%;
 	transition: opacity .3s, transform .3s;
-	animation: pulse-animation 1s cubic-bezier(.24, 0, .38, 1) 1 forwards;
 	z-index: -1;
 }
 .numbers li.active {
@@ -3715,7 +3713,7 @@ a:hover {
 	background: #FFF;
 }
 .numbers li.active:before {
-	display: block;
+	animation: pulse-animation 1s cubic-bezier(.24, 0, .38, 1) 1 forwards;
 }
 
 .section--B .numbers li {

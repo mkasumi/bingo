@@ -3666,6 +3666,18 @@ a:hover {
 	outline: 0;
 }
 
+.mobile-slider-container {
+	overflow: auto;
+}
+
+#mobileSelect {
+	min-width: 1000px;
+}
+
+.mobile-select-item {
+	width: 200px;
+}
+
 .numbers {
 	list-style: none;
 	margin: 0;

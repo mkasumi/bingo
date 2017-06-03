@@ -20,15 +20,17 @@
     </div>
   </div>
 
-  <div class="section__group">
-    <section v-for="(section,index) in sections" class="section" :class="['section--' + section]">
-      <h1 class="section-title">{{section}}</h1>
-      <div class="numbers__group">
-        <ul class="numbers" :class="['index--' + index]">
-          <li v-for="item in items" v-if="index*15 <= item.text-1 && item.text < (index + 1 )*15+1" v-bind:class="{ active: item.selected }">{{item.text}}</li>
-        </ul>
-      </div>
-    </section>
+  <div class="mobile-slider-container">
+    <div id="mobileSelect" class="section__group">
+      <section v-for="(section,index) in sections" class="section mobile-select-item" :class="['section--' + section]">
+        <h1 class="section-title">{{section}}</h1>
+        <div class="numbers__group">
+          <ul class="numbers" :class="['index--' + index]">
+            <li v-for="item in items" v-if="index*15 <= item.text-1 && item.text < (index + 1 )*15+1" v-bind:class="{ active: item.selected }">{{item.text}}</li>
+          </ul>
+        </div>
+      </section>
+    </div>
   </div>
 </div>
 <script>

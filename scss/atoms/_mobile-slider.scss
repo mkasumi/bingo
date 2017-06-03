@@ -1,0 +1,13 @@
+$bingo-item: 200px;
+
+.mobile-slider-container {
+  overflow: auto;
+}
+
+#mobileSelect {
+  min-width: ($bingo-item*5);
+}
+
+.mobile-select-item {
+  width: $bingo-item;
+}

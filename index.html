@@ -15,7 +15,7 @@
     </div>
     <div class="controller-item">
       <ol id="previously-items" class="previously-items">
-        <li v-for="num in nums" :class="['previously-item--' + num.section]"><span id="sectionItem" class="previously-item-section"></span><span id="odometer" class="odometer">{{ num.text }}</span></li>
+        <li v-for="num in nums" class="previously-item" :class="['previously-item--' + num.section]"><span id="sectionItem" class="previously-item-section"></span><span id="odometer" class="odometer">{{ num.text }}</span></li>
       </ol>
     </div>
   </div>
@@ -79,13 +79,13 @@
 
           odometer.innerHTML = selectedNums;
 
-          if(selectedNums < 15) {
+          if(selectedNums < 16) {
           var sectionGroup = 'B'; 
-          } else if (selectedNums < 30) {
+          } else if (selectedNums < 31) {
             var sectionGroup = 'I'; 
-          } else if (selectedNums < 45) {
+          } else if (selectedNums < 46) {
             var sectionGroup = 'N'; 
-          } else if (selectedNums < 60) {
+          } else if (selectedNums < 61) {
             var sectionGroup = 'G'; 
           } else if (selectedNums < 76) {
             var sectionGroup = 'O'; 

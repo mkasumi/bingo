@@ -3740,7 +3740,7 @@ a:hover {
 	display: -ms-flexbox;
 	display: flex;
 	list-style: none;
-	height: 2em;
+	height: 3em;
 	margin: 20px 0;
 	padding: 0;
 	font-size: calc(2em + 6vw);
@@ -3761,15 +3761,15 @@ a:hover {
 	text-align: center;
 }
 
-.previously-items .odometer {
+.previously-item {
 	display: -ms-flexbox;
 	display: flex;
 	-ms-flex-pack: center;
 	justify-content: center;
 	-ms-flex-align: center;
 	align-items: center;
-	width: 2em;
-	height: 2em;
+	width: 3em;
+	height: 3em;
 	margin: 0 5px;
 	color: #FFF;
 	font-size: 1em;
@@ -3778,27 +3778,27 @@ a:hover {
 	transition: background-color .2s;
 }
 
-.previously-item--undefined .odometer {
+.previously-item--undefined {
 	background: #CCC;
 }
 
-.previously-item--B .odometer {
+.previously-item--B {
 	background: #FF1744;
 }
 
-.previously-item--I .odometer {
+.previously-item--I {
 	background: #FF9100;
 }
 
-.previously-item--N .odometer {
+.previously-item--N {
 	background: #00C853;
 }
 
-.previously-item--G .odometer {
+.previously-item--G {
 	background: #304FFE;
 }
 
-.previously-item--O .odometer {
+.previously-item--O {
 	background: #A0F;
 }
 

@@ -1,7 +1,7 @@
 .previously-items {
   display: flex;
   list-style: none;
-  height: 2em;
+  height: 3em;
   margin: 20px 0;
   padding: 0;
   font-size: calc(2em + 6vw);
@@ -21,53 +21,43 @@
 }
 
 .previously-items {
-  .odometer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 2em;
-    height: 2em;
-    margin: 0 5px;
-    color: #FFF;
-    font-size: 1em;
-    text-align: center;
-    border-radius: 50%;
-    transition: background-color .2s;
-  }
+
+}
+
+.previously-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 3em;
+  height: 3em;
+  margin: 0 5px;
+  color: #FFF;
+  font-size: 1em;
+  text-align: center;
+  border-radius: 50%;
+  transition: background-color .2s;
 }
 
 .previously-item--undefined {
-  .odometer {
-    background: #CCC;
-  }
+  background: #CCC;
 }
 
 .previously-item--B {
-  .odometer {
-    background: $color-B;
-  }
+  background: $color-B;
 }
 
 .previously-item--I {
-  .odometer {
-    background: $color-I;
-  }
+  background: $color-I;
 }
 
 .previously-item--N {
-  .odometer {
-    background: $color-N;
-  }
+  background: $color-N;
 }
 
 .previously-item--G {
-  .odometer {
-    background: $color-G;
-  }
+  background: $color-G;
 }
 
 .previously-item--O {
-  .odometer {
-    background: $color-O;
-  }
+  background: $color-O;
 }

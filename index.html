@@ -14,9 +14,9 @@
       <button v-on:click="nextNum" class="btn-add">+</button>
     </div>
     <div class="controller-item">
-      <ol id="previously-items" class="previously-items">
-        <li v-for="num in nums" class="previously-item" :class="['previously-item--' + num.section]"><span id="sectionItem" class="previously-item-section"></span><span id="odometer" class="odometer">{{ num.text }}</span></li>
-      </ol>
+      <div id="previously-items" class="previously-items">
+        <div v-for="num in nums" class="previously-item" :class="['previously-item--' + num.section]"><span id="sectionItem" class="previously-item-section"></span><span id="odometer" class="odometer">{{ num.text }}</span></div>
+      </div>
     </div>
   </div>
 

@@ -3740,7 +3740,7 @@ a:hover {
 	display: -ms-flexbox;
 	display: flex;
 	list-style: none;
-	height: 3em;
+	height: 2.5em;
 	margin: 20px 0;
 	padding: 0;
 	font-size: calc(2em + 6vw);
@@ -3768,8 +3768,8 @@ a:hover {
 	justify-content: center;
 	-ms-flex-align: center;
 	align-items: center;
-	width: 3em;
-	height: 3em;
+	width: 2.5em;
+	height: 2.5em;
 	margin: 0 5px;
 	color: #FFF;
 	font-size: 1em;

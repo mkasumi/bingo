@@ -3659,8 +3659,12 @@ a:hover {
 	box-shadow: 0 4px 15px rgba(0, 0, 0, .4);
 	background-color: #2196F3;
 }
+.btn-add__text {
+	margin: -.2em 0 0 0;
+}
 .btn-add:hover {
 	box-shadow: 0 6px 20px rgba(0, 0, 0, .6);
+	cursor: pointer;
 }
 .btn-add:focus {
 	outline: 0;
@@ -3670,10 +3674,8 @@ a:hover {
 	list-style: none;
 	margin: 0;
 	padding: 0;
-	-moz-column-count: 3;
-	     column-count: 3;
-	-moz-column-gap: 5px;
-	     column-gap: 5px;
+	column-count: 3;
+	column-gap: 5px;
 }
 
 .numbers li {
